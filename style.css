@@ -1,0 +1,166 @@
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+body {
+  background: #f8f8f0;
+}
+section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #5c3b1e;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #e2c2a5;
+}
+
+/* PAGE 1 */
+#page1 {
+  background: url('page1.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page1 h1 {
+  font-size: 3em;
+}
+
+/* PAGE 2 - ABOUT ME */
+#page2 {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 30px 100px;
+}
+#page2 .about-text {
+  flex: 1;
+  max-width: 500px;
+  padding: 20px;
+}
+#page2 .about-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+#page2 .about-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+#page2 img {
+  flex: 1;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* PAGE 3 - PORTFOLIO */
+#page3 {
+  background: #f8f8f0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 160px 30px 200px;
+}
+#page3 .text {
+  flex: 1;
+  max-width: 400px;
+  margin-right: 30px;
+}
+#page3 h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+#page3 p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+#page3 .gallery {
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+#page3 .gallery::-webkit-scrollbar {
+  height: 8px;
+}
+#page3 .gallery::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+#page3 .gallery img {
+  height: 200px;
+  border-radius: 10px;
+}
+
+/* PAGE 4 */
+#page4 {
+  background: #5c3b1e;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 100px 60px;
+}
+#page4 img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-right: 40px;
+}
+#page4 .contact {
+  max-width: 400px;
+}
+#page4 h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+#page4 p {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  #page2, #page3, #page4 {
+    flex-direction: column;
+    text-align: center;
+  }
+  #page3 .gallery {
+    justify-content: center;
+  }
+  #page3 .gallery img {
+    height: 150px;
+  }
+  #page4 img {
+    margin: 0 0 30px;
+  }
+}
